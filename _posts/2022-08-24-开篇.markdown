@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2022-08-24 07:56:25 +0800
+categories: jekyll update
+---
+### 开篇  
+
+第一篇博客写点什么呢？这是我第二次使用jekyll 和git-pages鼓捣博客了。第一次是在2021年的年初吧，搞了一下，写了几篇之后就再没然后了。最终把 GitHub 上的仓库删掉了。这次又想起来写博客就是想写点东西，想着放在什么地方，那就托管在 GitHub 上吧，所以又想起来 jekyll 了，想着以前也搞定过，就动手做了。结果是花费了我两个星期才把这一篇文章写出来。既然不知道我这第一篇要写点什么，那我就把这次搭建博客的过程写下来吧。  
+
+---   
+
+去年搭建博客的时候用的是 windows, jekyll 还不直接支持 windows 还是在官网的指导下把 jekyll serve 在本地配置好的。看着官网支持 MacOS 那肯定是更简单了，可事实却不是想的那样。  
+
+在 MacOS 上遇到的第一个问题是 MacOS 自带的 Ruby 不支持 Gem 配置吧，所以安装别的Ruby, 那就用homebrew安装，在网上看到要管理不同版本的Ruby比较麻烦，有个好的办法就是用chruby, 用brew安装好了chruby才知道这个是Ruby 版本管理工具，在你安装的各个版本之间切换的一个工具，所以还要安装Ruby. 用homebrew 安装好Ruby又看到用bundler 来管理项目的Gems。Ruby 不是有包管理工具Gem吗？为什么还要用bunlder这个包管理工具呢？经过搜索才知道，bundler可以管理每个项目的Gemfile 里面的Gems，是一个比较好用的一个项目包管理工具。到此算是把环境搞的差不多明白了。接下来又来了一些新的问题。   
+
+新建一个项目以后，运行bundle exec Jekyll serve, 报错提示缺少webrick, 上网一通搜索得知，把这个webrick添加到Gemfile, bundle install 就可以解决这个问题。接着是缺少daraday-retry,各式各样的问题。最终是终于搞定了。  
+
+开始想写博客的时候，又嫌弃默认的theme 不太好看，想着自己写各式配置，想来简单，不就是添加layout.html 和css 文件吗，这个又有什么难的呢？ 折腾两天，感觉还是用默认发主题吧，不好看的问题，以后有时间再慢慢修改吧。   
+
+这就是大致我做这个博客网页的过程。在这个过程中让我体会到了：做什么事情都不是一帆风顺的这句话。做每件事情都有它的困难和麻烦，只有一点一点的把这个麻烦给解决掉，才能获得进步。进步都是在解决麻烦的过程中习得的。
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
